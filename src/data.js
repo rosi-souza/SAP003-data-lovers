@@ -1,8 +1,10 @@
-// esta é uma função de exemplo
-// veja como agregamos a função ao objeto global window
+const calculadora = (velocidade, ovo, incubadora, tempo) => { //incubadora = 1 ou super = 0,664
+  let distancia = ovo*incubadora;  // distancia em Km
+  let t = distancia/velocidade; // tempo t em hora
+  let dias = t/(tempo/60);  // transforma tempo em hora
+  return dias
 
-const example = () => {
-  return "example";
+  console.log(dias);
 };
 
-window.example = example;
+window.data = calculadora;
