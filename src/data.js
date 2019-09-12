@@ -2,7 +2,7 @@
 // veja como agregamos a função ao objeto global window
 
 const example = () => {
-  return "example";
+  return "id";
 };
 
-window.example = example;
+window.data = example;
