@@ -14,7 +14,7 @@ window.data = calculadora;
 // };
 
 
-// let image = []
+// let image = [
 
 // const filterNames = () => {
 //   for (let x of POKEMONS) {
