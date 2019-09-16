@@ -6,7 +6,7 @@ const tempoDiario = 15;
 
 result[0].innerHTML = `Aproximadamente ${calculadora(velocidade, ovo, incubadora, tempoDiario)} dias `
 
-===========================
+
 
 const listapokemon = POKEMON.pokemon;
 
