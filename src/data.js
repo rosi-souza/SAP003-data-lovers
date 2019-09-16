@@ -4,6 +4,7 @@ const calculadora = (velocidade, ovo, incubadora, tempoDiario) => { //incubadora
 };
 
 window.data = calculadora;
+
 // esta é uma função de exemplo
 // veja como agregamos a função ao objeto global window
 // const POKEMONS = POKEMON.pokemon;
