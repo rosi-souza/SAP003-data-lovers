@@ -1,11 +1,9 @@
-<<<<<<< HEAD
 const calculadora = (velocidade, ovo, incubadora, tempoDiario) => { //incubadora = 1 ou super = 0,667
   let dias = ~~((ovo*incubadora/velocidade)/(tempoDiario/60));
   return dias
 };
 
 window.data = calculadora;
-=======
 // esta é uma função de exemplo
 // veja como agregamos a função ao objeto global window
 // const POKEMONS = POKEMON.pokemon;
@@ -24,4 +22,3 @@ window.data = calculadora;
 //   }
 // };
 // window.data = filterNames;
->>>>>>> 74fd963b11a5d8db6456b4c53e1a097370549e36
