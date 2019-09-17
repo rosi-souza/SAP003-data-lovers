@@ -21,10 +21,11 @@ radio.addEventListener("change", filtrado => {
            return 1; 
         return 0;
     })
-
+    
+    let layout = "";
     printarpoke.innerHTML = ""
-    filtrado.forEach(element => {printarpoke.innerHTML += `${element.name} <img src = "${element.img}">`});
-
+    filtrado.forEach(element => {layout += `<div class="pokemon-card"> ${element.name} <img src = "${element.img}"> </div>`});
+    printarpoke.innerHTML = layout;
 })
 
 let a = filtro(listapokemon, "2 km");
