@@ -37,3 +37,22 @@ li a {
   padding: 16px;
   margin-bottom: 14px;
 }
+
+
+
+input[type="radio"] {
+  visibility: hidden;
+}
+label {
+  display: block;
+  border: 4px solid #666;
+  width: auto;
+  float: left;
+}
+
+input[type="radio"]:checked+label {
+  border-color: #ccf;
+}
+img {
+height: 100px;
+}

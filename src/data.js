@@ -3,23 +3,10 @@ const calculadora = (velocidade, ovo, incubadora, tempoDiario) => { //incubadora
   return dias
 };
 
+const filtro = (array, ovo) => {
+  return array.filter(x => x.egg == ovo)      
+}
+
 window.data = calculadora;
+window.data = filtro;
 
-// esta é uma função de exemplo
-// veja como agregamos a função ao objeto global window
-// const POKEMONS = POKEMON.pokemon;
-
-// const example = () => {
-//   return "id";
-// };
-
-
-// let image = [
-
-// const filterNames = () => {
-//   for (let x of POKEMONS) {
-//     x.name + `<img src="${x.img}"/>`;
-
-//   }
-// };
-// window.data = filterNames;
