@@ -12,18 +12,36 @@ const printarpoke = document.getElementById("pokemon");
 const listapokemon = POKEMON.pokemon;
 
 radio = document.getElementById("radio")
+radio.addEventListener("change", filtrado => {
+    filtrado = filtro(listapokemon, event.target.value)
+    filtrado.sort((a,b) => {
+        if (a.name < b.name)
+            return -1;    
+        if (a.name > b.name)
+           return 1; 
+        return 0;
+    })
 
-// try3
-radio.addEventListener("change", filtrado = () => {
-    const filtrado = filtro(listapokemon, event.target.value)
     printarpoke.innerHTML = ""
-    filtrado.forEach(element => {
-    printarpoke.innerHTML += `${element.name} <img src = "${element.img}">`;
-    });
+    filtrado.forEach(element => {printarpoke.innerHTML += `${element.name} <img src = "${element.img}">`});
+
 })
 
-//try2
-// const filtrado = filtro(listapokemon, 2)
-// filtrado.forEach(element => {
-// printarpoke.innerHTML += `${element.name} <img src = "${element.img}">`;
+let a = filtro(listapokemon, "2 km");
+console.log(a); //
+a.sort((a,b) => {
+    if (a.name < b.name)
+        return -1;    
+    if (a.name > b.name)
+       return 1; 
+    return 0;
+})
+
+console.log(a);
+
+// radio = document.getElementById("radio")
+// radio.addEventListener("change", filtrado => {
+//     filtrado = filtro(listapokemon, event.target.value)
+//     printarpoke.innerHTML = ""
+//     filtrado.forEach(element => {printarpoke.innerHTML += `${element.name} <img src = "${element.img}">`});
 // })
