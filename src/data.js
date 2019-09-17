@@ -4,7 +4,7 @@ const calculadora = (velocidade, ovo, incubadora, tempoDiario) => { //incubadora
 };
 
 const filtro = (array, ovo) => {
-  return array.filter(x => x.egg == ovo + " km")      
+  return array.filter(x => x.egg == ovo)      
 }
 
 window.data = calculadora;

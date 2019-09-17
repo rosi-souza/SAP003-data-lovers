@@ -38,6 +38,8 @@ li a {
   margin-bottom: 14px;
 }
 
+
+
 input[type="radio"] {
   visibility: hidden;
 }
@@ -52,5 +54,5 @@ input[type="radio"]:checked+label {
   border-color: #ccf;
 }
 img {
-height: 200px;
+height: 100px;
 }
