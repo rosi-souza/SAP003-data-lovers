@@ -7,14 +7,15 @@ const filtro = (array, ovo) => {
   return array.filter(x => x.egg == ovo)      
 }
 
-const ordem = (array) => {
+const ordem = (array, data) => {
   array.sort((a,b) => {
-  if (a.name < b.name)
+    if (a[data] < b[data])
       return -1;    
-  if (a.name > b.name)
-     return 1; 
-  return 0;
+    if (a[data] > b[data])
+      return 1; 
+    return 0;
   })
+return array
 }
 
 window.data = calculadora;
