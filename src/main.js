@@ -14,9 +14,17 @@ const listapokemon = POKEMON.pokemon;
 radio = document.getElementById("radio")
 radio.addEventListener("change", () => {
     filtrado = filtro(listapokemon, event.target.value);
-    ordem(filtrado, "name");   
+    printar(filtrado)
+})
+select = document.getElementById("select")
+select.addEventListener("change", () => {
+    ordenado = ordem(filtrado, event.target.value)
+    printar(ordenado)
+    });
+
+const printar = array => {
     let layout = "";
     printarpoke.innerHTML = ""
-    filtrado.forEach(element => {layout += `<span class="pokemon-card">${element.name} <img src = "${element.img}"></span>`})
+    array.forEach(element => {layout += `<span class="pokemon-card"><img src = "${element.img}"> ${element.id}.${element.name} Tipo:${element.type}</span>`})
     printarpoke.innerHTML = layout;
-})
+}

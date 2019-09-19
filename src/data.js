@@ -15,7 +15,7 @@ const ordem = (array, data) => {
       return 1; 
     return 0;
   })
-return array
+  return array
 }
 
 window.data = calculadora;
