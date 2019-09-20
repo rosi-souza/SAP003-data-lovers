@@ -7,23 +7,24 @@ const tempoDiario = 15;
 
 result[0].innerHTML = `Aproximadamente ${calculadora(velocidade, ovo, incubadora, tempoDiario)} dias `
 
-// filtro
+// filtro e ordenação
 const printarpoke = document.getElementById("pokemon");
 const listapokemon = POKEMON.pokemon;
 
 radio = document.getElementById("radio")
-
-// try3
-radio.addEventListener("change", filtrado = () => {
-    const filtrado = filtro(listapokemon, event.target.value)
-    printarpoke.innerHTML = ""
-    filtrado.forEach(element => {
-    printarpoke.innerHTML += `${element.name} <img src = "${element.img}">`;
-    });
+radio.addEventListener("change", () => {
+    filtrado = filtro(listapokemon, event.target.value);
+    printar(filtrado)
 })
+select = document.getElementById("select")
+select.addEventListener("change", () => {
+    ordenado = ordem(filtrado, event.target.value)
+    printar(ordenado)
+    });
 
-//try2
-// const filtrado = filtro(listapokemon, 2)
-// filtrado.forEach(element => {
-// printarpoke.innerHTML += `${element.name} <img src = "${element.img}">`;
-// })
+const printar = array => {
+    let layout = "";
+    printarpoke.innerHTML = ""
+    array.forEach(element => {layout += `<span class="pokemon-card"><img src = "${element.img}"> ${element.id}.${element.name} Tipo:${element.type}</span>`})
+    printarpoke.innerHTML = layout;
+}
