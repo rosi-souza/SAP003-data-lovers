@@ -18,9 +18,11 @@ radio.addEventListener("change", filtrado = () => {
   const filtrado = filtro(listapokemon, event.target.value);
   printarpoke.innerHTML = "";
   filtrado.forEach(element => {
-printarpoke.innerHTML += `<div class="card"><div class="card-pokemon">
-			${element.name}
-			<img class="image" src = "${element.img}">
+    printarpoke.innerHTML += `
+  <div class="card">
+    <div class="card-pokemon">
+      <img class="image" src = "${element.img}">
+      <span class="name">${element.name}</span>
 		</div>
 	</div>`;
   });
