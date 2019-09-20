@@ -14,53 +14,9 @@ const ordem = (array, data) => {
     if (a[data] > b[data])
       return 1; 
     return 0;
-  })
-  return array
-}
-
-const ordem = (array, data) => {
-  array.sort((a,b) => {
-    if (a[data] < b[data])
-      return -1;    
-    if (a[data] > b[data])
-      return 1; 
-    return 0;
-  })
-  return array
-}
-
-const ordem = (array, data) => {
-  array.sort((a,b) => {
-    if (a[data] < b[data])
-      return -1;    
-    if (a[data] > b[data])
-      return 1; 
-    return 0;
-  })
-  return array
-}
-
-const ordem = (array, data) => {
-  array.sort((a,b) => {
-    if (a[data] < b[data])
-      return -1;    
-    if (a[data] > b[data])
-      return 1; 
-    return 0;
-  })
-  return array
-}
-
-const ordem = (array, data) => {
-  array.sort((a,b) => {
-    if (a[data] < b[data])
-      return -1;    
-    if (a[data] > b[data])
-      return 1; 
-    return 0;
-  })
-  return array
-}
+  });
+  return array;
+};
 
 window.data = calculadora;
 window.data = filtro;

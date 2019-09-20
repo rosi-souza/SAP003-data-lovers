@@ -11,26 +11,26 @@ result[0].innerHTML = `Aproximadamente ${calculadora(velocidade, ovo, incubadora
 const printarpoke = document.getElementById("pokemon");
 const listapokemon = POKEMON.pokemon;
 
-radio = document.getElementById("radio")
+radio = document.getElementById("radio");
 radio.addEventListener("change", () => {
-    filtrado = filtro(listapokemon, event.target.value);
-    printar(filtrado)
-})
-select = document.getElementById("select")
+  filtrado = filtro(listapokemon, event.target.value);
+  printar(filtrado);
+});
+select = document.getElementById("select");
 select.addEventListener("change", () => {
-    ordenado = ordem(filtrado, event.target.value)
-    printar(ordenado)
-    });
+  ordenado = ordem(filtrado, event.target.value);
+  printar(ordenado);
+});
 
 const printar = array => {
-    let layout = "";
-    printarpoke.innerHTML = ""
-    array.forEach(element => {layout += `
+  let layout = "";
+  printarpoke.innerHTML = "";
+  array.forEach(element => {layout += `
     <div class="card">
       <div class="card-pokemon">
         <img src = "${element.img}">
         <span class="name"> ${element.id}.${element.name} Tipo:${element.type}</span>
       </div>
     </div>`})
-    printarpoke.innerHTML = layout;
+  printarpoke.innerHTML = layout;
 }
