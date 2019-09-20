@@ -1,11 +1,11 @@
 // calculadora
-const result = document.getElementsByClassName('resultado');
+const result = document.getElementsByClassName("resultado");
 const velocidade = 5;
 const ovo = 10;
 const incubadora = 1;
 const tempoDiario = 15;
 
-result[0].innerHTML = `Aproximadamente ${calculadora(velocidade, ovo, incubadora, tempoDiario)} dias `
+result[0].innerHTML = `Aproximadamente ${calculadora(velocidade, ovo, incubadora, tempoDiario)} dias `;
 
 // filtro e ordenação
 const printarpoke = document.getElementById("pokemon");
@@ -25,6 +25,12 @@ select.addEventListener("change", () => {
 const printar = array => {
     let layout = "";
     printarpoke.innerHTML = ""
-    array.forEach(element => {layout += `<span class="pokemon-card"><img src = "${element.img}"> ${element.id}.${element.name} Tipo:${element.type}</span>`})
+    array.forEach(element => {layout += `
+    <div class="card">
+      <div class="card-pokemon">
+        <img src = "${element.img}">
+        <span class="name"> ${element.id}.${element.name} Tipo:${element.type}</span>
+      </div>
+    </div>`})
     printarpoke.innerHTML = layout;
 }

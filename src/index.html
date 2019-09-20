@@ -4,19 +4,21 @@
     <meta charset="utf-8">
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
+    <link href="https://cdn.lineicons.com/1.0.1/LineIcons.min.css" rel="stylesheet">
   </head>
   <body>
-    <!-- <header>
-      <h1> NOME </h1>
-    </header> -->
-    <img src="https://fontmeme.com/permalink/190916/53bc315987f2845c82742bb3077372a2.png" alt="fonte-de-pokemon-go">
+    <header>
+      <img class="icon-egg" src="icone-egg.svg" alt="Icone ovo">
+      <img class="title" src="https://fontmeme.com/permalink/190916/53bc315987f2845c82742bb3077372a2.png" alt="fonte-de-pokemon-go">
+    </header>
     <section class="menu">
       <div class="navbar">
         <ul>
-          <li><a>SOBRE SITE</a></li>
+          <li class="about-menu"><a>SOBRE</a></li>
           <li><a>SOBRE POKEMON GO</a></li>
           <li><a>CALCULADORA</a></li>
-          <li><a>FILTRO</a></li>
+          <li ><a>POKEMON POR OVO</a></li>
+          <!-- <i class="lni-chevron-down"></i> -->
         </ul>
       </div>
     </section>
@@ -47,14 +49,15 @@
         </div>
       </section>
       <section class="filtro">
-        Filtro
+        <p>Escolha um ovo para visualizar os pokemons que podem eclodir</p>
         <section class="radio" id ="radio">
+        <div class="egg-option">
             <input type="radio" name="imagem" id="i1" value="2 km"/>
-            <label for="i1"><img src="http://vkontakte.ru/images/gifts/256/81.jpg" alt=""></label>
+            <label for="i1"><img class="egg"src="Egg_2k.png" alt=""></label>
             <input type="radio" name="imagem" id="i2" value="5 km"/>
-            <label for="i2"><img src="http://vkontakte.ru/images/gifts/256/82.jpg" alt=""></label>
+            <label for="i2"><img class="egg" src="Egg_5k.png" alt=""></label>
             <input type="radio" name="imagem" id="i3" value="10 km" />
-            <label for="i3"><img src="http://vkontakte.ru/images/gifts/256/83.jpg" alt=""></label>
+            <label for="i3"><img class="egg"src="egg10.png" alt=""></label>
         </section>
         <label for="select"> Ordenar por: </label>
           <select class="select" id="select">
@@ -64,7 +67,10 @@
         </section>
         <div id="pokemon">        
         </div>
-      </section>
+        </section>
+    </section>
+    <div class="pokemon" id="pokemon"></div>
+
     </main>
     <script src="data/pokemon/pokemon.js"></script>
     <script src="data.js"></script>
