@@ -5,21 +5,36 @@ body {
 h1 {
   text-align: center;
 }
+header {
+  display: flex;
+  justify-content: center;
+}
+
+.img {
+  width: 100%;
+  height: auto;
+}
 
 .icon-egg {
   width: 80px;
 }
-
 .navbar {
-  width: 900px;
-}
+  /* width: 900px; */
+  margin-right: auto;
+  margin-left: auto;
+ }
+
 ul {
+  padding: 0px;
   list-style-type: none;
   overflow: hidden;
   border: 2px solid #3A67BC;
   border-radius: 30px;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   box-shadow: 0px 4px 0px rgba(0,0,0,0.3);
+
 }
 
 li a:hover {
@@ -36,16 +51,8 @@ li a {
   font-weight: 700;
 
 }
-li {
-  padding-right: 40px;
-}
-.about {
-  border: solid 1px #ff6a62;
-  padding: 16px;
-  margin-bottom: 14px;
-}
 
-.calculadora {
+.calculadora, .about {
   border: solid 1px #ff6a62;
   padding: 16px;
   margin-bottom: 14px;
@@ -63,9 +70,6 @@ label {
   border-radius: 2px; */
 }
 
-input[type="radio"]:checked+label {
-  border-color: #ccf;
-}
 .egg {
 height: 100px;
 margin: 20px; 
@@ -73,13 +77,21 @@ cursor: pointer;
 }
 
 .radio {
-  display: table;
+  display: flex;
+  justify-content: center;
+  filter: opacity(30%);
+}
+.radio :checked+label {
+  filter: none;
+}
+
+#pokemon {
+  display: flex;
+  flex-wrap: wrap;
 }
 .card {
   margin: 10px;
-  display: inline-block;
-  /* display: flex; */
-}
+ }
 
 .card-pokemon {
   border: solid 4px white;
@@ -89,17 +101,14 @@ cursor: pointer;
   text-align: center;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   background-color: white;
-
-}
-.about-menu {
-  padding-left: 28px;
+  
 }
 
-.image, .title {
+/* .image, .title {
   display: block;
   margin-left: auto;
   margin-right: auto;
-}
+} */
 
 .name {
   margin-top: 80px;
