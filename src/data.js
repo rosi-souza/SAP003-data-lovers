@@ -8,7 +8,7 @@ const filtro = (array, ovo) => {
 };
 
 const ordem = (array, data) => {
-  array.sort((a,b) => {
+  array.sort((a, b) => {
     if (a[data] < b[data])
       return -1;    
     if (a[data] > b[data])

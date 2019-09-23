@@ -31,7 +31,6 @@
       </section>
       <section class="calculadora">
         calculadora
-        
         <div class="velocidade">
           velocidade
         </div>
@@ -49,28 +48,31 @@
         </div>
       </section>
       <section class="filtro">
-        <p>Escolha um ovo para visualizar os pokemons que podem eclodir</p>
+        <h3>Escolha um ovo para visualizar os pokemons que podem eclodir</h3>
         <section class="radio" id ="radio">
-        <div class="egg-option">
+          <div class="egg-option">
             <input type="radio" name="imagem" id="i1" value="2 km"/>
             <label for="i1"><img class="egg"src="Egg_2k.png" alt=""></label>
             <input type="radio" name="imagem" id="i2" value="5 km"/>
             <label for="i2"><img class="egg" src="Egg_5k.png" alt=""></label>
             <input type="radio" name="imagem" id="i3" value="10 km" />
             <label for="i3"><img class="egg"src="egg10.png" alt=""></label>
+          </div>
+          </div>
+          <div id="pokemon"></div>
         </section>
+      </section> 
+      <hr>
+      <section>
+        <section class="radio" id ="banana">
         <label for="select"> Ordenar por: </label>
-          <select class="select" id="select">
-            <option name="id" id="id" value="id">Numero</option>
-            <option name="nome" id="nome" value="name">Nome</option>
-          </select>
-        </section>
-        <div id="pokemon">        
-        </div>
-        </section>
-    </section>
-    <div class="pokemon" id="pokemon"></div>
-
+        <select class="select" id="select">
+          <option name="" id="" value="">Selecione uma opção</option>
+          <option name="id" id="id" value="id">Numero</option>
+          <option name="nome" id="nome" value="name">Nome</option>
+        </select>
+        <div id="showpokemons"></div>
+      </section>
     </main>
     <script src="data/pokemon/pokemon.js"></script>
     <script src="data.js"></script>
