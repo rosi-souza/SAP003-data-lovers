@@ -18,7 +18,7 @@ radio.addEventListener("change", () => {
   printar(filtrado, printarpoke);
 });
 
-select = document.getElementById("banana");
+select = document.getElementById("select");
 select.addEventListener("change", () => {
   ordemtodos = ordem(listapokemon, event.target.value);
   printar(ordemtodos, showpokemons);

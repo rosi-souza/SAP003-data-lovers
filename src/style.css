@@ -76,23 +76,17 @@ margin: 20px;
 cursor: pointer;
 }
 
-.radio {
-  display: flex;
-  justify-content: center;
-  filter: opacity(30%);
-}
 .radio :checked+label {
-  filter: none;
+  filter: none;  
 }
 
-#pokemon {
+#pokemon, #showpokemons {
   display: flex;
   flex-wrap: wrap;
 }
 .card {
   margin: 10px;
  }
-
 .card-pokemon {
   border: solid 4px white;
   padding: 10px;
@@ -101,19 +95,21 @@ cursor: pointer;
   text-align: center;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   background-color: white;
-  
-}
+  }
 
 /* .image, .title {
   display: block;
   margin-left: auto;
   margin-right: auto;
 } */
-
+.select {
+  display: block;
+}
 .name {
   margin-top: 80px;
 }
 
 .egg-option {
+  filter: opacity(30%);
   /* background-color: #FF0000 */
 }
