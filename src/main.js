@@ -34,7 +34,7 @@ const printar = (array, element) => {
         <img src = "${element.img}">
         <span class="name"> ${element.id}.${element.name} Tipo:${element.type}</span>
       </div>
-    </div>`});
+    </div>`;});
   element.innerHTML = layout;
 };
 
