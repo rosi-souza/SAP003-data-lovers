@@ -18,6 +18,8 @@ const ordem = (array, data) => {
   return array;
 };
 
-window.data = calculadora;
-window.data = filtro;
-window.data = ordem;
+window.data = {
+  calculadora: calculadora,
+  filtro: filtro,
+  ordem: ordem
+};
