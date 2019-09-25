@@ -18,7 +18,7 @@ radio.addEventListener("change", () => {
   printar(filtrado, printarpoke);
 });
 
-select = document.getElementById("select");
+select = document.getElementById("select-section");
 select.addEventListener("change", () => {
   ordemtodos = ordem(listapokemon, event.target.value);
   printar(ordemtodos, showpokemons);
@@ -32,9 +32,10 @@ const printar = (array, element) => {
     <div class="card">
       <div class="card-pokemon">
         <img src = "${element.img}">
-        <span class="name"> ${element.id}.${element.name} Tipo:${element.type}</span>
+        <span class="name"> ${element.id}.${element.name}</span>
+        <p class="type"> Tipo:${element.type}</p>
       </div>
-    </div>`});
+    </div>`;});
   element.innerHTML = layout;
 };
 
