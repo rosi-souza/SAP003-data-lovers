@@ -7,7 +7,7 @@ const filtro = (array, ovo) => {
   return array.filter(x => x.egg == ovo);
 };
 
-const ordem = (array, data, key) => {
+const ordem = (array, data, order) => {
   array.sort((a, b) => {
     if (a[data] < b[data])
       return -1;    
@@ -15,15 +15,14 @@ const ordem = (array, data, key) => {
       return 1; 
     return 0;
   });
-  
-  return key === "crescente" ? array : array.reverse()
+  return order === "decrescente" ? array.reverse(): array;
 
   // if (key === "crescente") {
   //   return array;
   // } else {
   //   return array.reverse()
   // };
-}
+};
 
 window.data = {
   calculadora: calculadora,

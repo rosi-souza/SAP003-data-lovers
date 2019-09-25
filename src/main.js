@@ -20,7 +20,10 @@ radio.addEventListener("change", () => {
 
 select = document.getElementById("select");
 select.addEventListener("change", () => {
-  ordemtodos = ordem(listapokemon, event.target.value);
+  let cresc = event.target.class;
+  console.log(cresc);
+  
+  ordemtodos = ordem(listapokemon, event.target.value, cresc);
   printar(ordemtodos, showpokemons);
 
 });
