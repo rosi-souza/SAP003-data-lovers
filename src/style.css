@@ -1,13 +1,13 @@
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 h1 {
-  text-align: center;
+  margin-left: 68px;
 }
 header {
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
 }
 
 .img {
@@ -16,25 +16,25 @@ header {
 }
 
 .icon-egg {
-  width: 80px;
+  width: 50px;
+  position: absolute;
 }
 .navbar {
-  /* width: 900px; */
-  margin-right: auto;
   margin-left: auto;
  }
 
 ul {
-  padding: 0px;
+  padding: 10px;
   list-style-type: none;
   overflow: hidden;
-  border: 2px solid #3A67BC;
-  border-radius: 30px;
+  /* border: 2px solid #3A67BC; */
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  box-shadow: 0px 4px 0px rgba(0,0,0,0.3);
-
+  padding-left: 0px;
+  border-left: none;
+  border-right: none;
+  /* box-shadow: 0px 4px 0px rgba(0,0,0,0.3); */
+  float: right;
 }
 
 li a:hover {
@@ -49,7 +49,31 @@ li a {
   text-decoration: none;
   cursor: pointer;
   font-weight: 700;
+}
 
+.lni-menu {
+  font-size: 20px;
+  font-weight: bolder;
+  cursor: pointer;
+  display: none;
+}
+input[type="checkbox"] {
+  visibility: hidden;
+}
+
+@media only screen and (max-width: 767px) {
+  .lni-menu {
+    font-size: 20px;
+    font-weight: bolder;
+    display: block;
+    cursor: pointer;
+  }
+  ul {
+    display: none;
+  }
+  input .lni-menu :checked + ul li {
+    display: block;
+  }
 }
 
 .calculadora, .about {
@@ -61,14 +85,14 @@ li a {
 input[type="radio"] {
   visibility: hidden;
 }
-label {
+/* label {
   /* display: block;
   border: 1px solid #666;
   width: auto;
   float: left;
   margin: 20px;
   border-radius: 2px; */
-}
+
 
 .egg {
 height: 100px;
@@ -95,6 +119,7 @@ cursor: pointer;
   text-align: center;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   background-color: white;
+ 
   }
 
 /* .image, .title {
@@ -104,12 +129,40 @@ cursor: pointer;
 } */
 .select {
   display: block;
+  height: 40px;
+  font-size: 18px;
+  margin-bottom: 16px;
 }
 .name {
-  margin-top: 80px;
+  margin-top: 50px;
 }
 
 .egg-option {
-  filter: opacity(30%);
-  /* background-color: #FF0000 */
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.type {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.egg-km {
+  justify-content: center;
+  display: flex;
+  font-size: 26px;
+  font-weight: 700;
+}
+#km-2 {
+  color: #96B46C;
+}
+
+#km-5 {
+  color: #D39738;
+}
+#km-10 {
+  color: #8A7CC8;
+}
+#showpokemons {
+  margin-top: 60px;
 }
