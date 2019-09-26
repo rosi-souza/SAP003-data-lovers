@@ -30,7 +30,7 @@ const peixinho = document.getElementById("calcular").addEventListener("click", (
   const velocidade = document.querySelector('input[name ="velocidade"]:checked').value;
   const ovo = document.querySelector('input[name="ovo"]:checked').value;
   const incubadora = document.querySelector('input[name="incubadora"]:checked').value;
-  const tempoDiario = document.querySelector('input[name="tempo"]').value;
+  const tempoDiario = document.querySelector('input[name="tempo"]:checked').value;
   banana(velocidade, ovo, incubadora, tempoDiario);
   console.log(ovo);
   console.log(velocidade);
