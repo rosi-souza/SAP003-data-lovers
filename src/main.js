@@ -39,14 +39,16 @@ select.addEventListener("change", () => {
 const printar = (array, element) => {
   let layout = "";
   element.innerHTML = "";
-  array.forEach(element => {layout += `
+  array.forEach(element => {
+    layout += `
     <div class="card">
       <div class="card-pokemon">
         <img src = "${element.img}">
         <span class="name"> ${element.id}.${element.name}</span>
         <p class="type"> Tipo:${element.type}</p>
       </div>
-    </div>`;});
+    </div>`;
+  });
   element.innerHTML = layout;
 };
 
