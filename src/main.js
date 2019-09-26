@@ -1,11 +1,19 @@
 // calculadora
-const result = document.getElementsByClassName("resultado");
-const velocidade = 5;
-const ovo = 10;
-const incubadora = 1;
-const tempoDiario = 15;
 
-result[0].innerHTML = `Aproximadamente ${calculadora(velocidade, ovo, incubadora, tempoDiario)} dias `;
+const resultado = document.getElementById("resultado");
+
+const banana = (velocidade, ovo, incubadora, tempoDiario) => {
+  resultado.innerHTML = `<p>Você irá caminhar por aproximadamente:  ${calculadora(velocidade, ovo, incubadora, tempoDiario)} dias`;
+};
+
+const peixinho = document.getElementById("calcular").addEventListener("click", () => {
+  event.preventDefault();
+  const velocidade = document.querySelector('input[name ="velocidade"]:checked').value;
+  const ovo = document.querySelector('input[name="ovo"]:checked').value;
+  const incubadora = document.querySelector('input[name="incubadora"]:checked').value;
+  const tempoDiario = document.querySelector('input[name="tempo"]:checked').value;
+  banana(velocidade, ovo, incubadora, tempoDiario);
+});
 
 // filtro e ordenação
 const printarpoke = document.getElementById("pokemon");

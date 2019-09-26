@@ -1,5 +1,5 @@
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 h1 {
@@ -49,6 +49,7 @@ li a {
   text-decoration: none;
   cursor: pointer;
   font-weight: 700;
+  font-size: 14px;
 }
 
 .lni-menu {
@@ -82,7 +83,7 @@ input[type="checkbox"] {
   margin-bottom: 14px;
 }
 
-input[type="radio"] {
+.radio [type="radio"] {
   visibility: hidden;
 }
 /* label {
@@ -107,6 +108,7 @@ cursor: pointer;
 #pokemon, #showpokemons {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 .card {
   margin: 10px;
@@ -137,6 +139,7 @@ cursor: pointer;
   margin-top: 50px;
 }
 
+
 .egg-option {
   display: flex;
   justify-content: center;
@@ -165,4 +168,18 @@ cursor: pointer;
 }
 #showpokemons {
   margin-top: 60px;
+}
+.btn-resultado {
+  padding: 10px;
+  background-color: #08224e;
+  color: white;
+  font-size: 16px;
+  border-radius: 8px;
+  border-color: #08224e;
+  cursor: pointer;
+}
+.incubadora {
+  cursor: pointer;
+  height: 100px;
+  /* margin-bottom: 40px; */
 }

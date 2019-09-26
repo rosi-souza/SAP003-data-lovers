@@ -1,6 +1,12 @@
 const calculadora = (velocidade, ovo, incubadora, tempoDiario) => { //incubadora = 1 ou super = 0,667
   let dias = ~~((ovo*incubadora/velocidade)/(tempoDiario/60));
-  return dias;
+  console.log(dias);
+  if ( dias <= 1) {
+    return 1;
+  }
+  else {
+    return dias;
+  }
 };
 
 const filtro = (array, ovo) => {
