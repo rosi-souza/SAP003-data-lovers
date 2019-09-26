@@ -1,28 +1,9 @@
 // calculadora
-// document.getElementById("calcular").;
-// const velocidade = document.getElementById("egg-km").value;;
-// const ovo = document.getElementById("velocidade").value;
-// const incubadora = document.getElementById("incubadora").value;
-// const tempoDiario = document.getElementById("minutos").value;
+
 const resultado = document.getElementById("resultado");
 
-// result[0].innerHTML = `Aproximadamente ${calculadora(velocidade, ovo, incubadora, tempoDiario)} dias `;
-
-// b = document.getElementById("calculadora");
-// b.addEventListener("change", () => {
-//   const velocidade = document.getElementById("velocidade").value;; 
-//   const ovo = document.getElementById("egg-km").value;
-//   const incubadora = document.getElementById("incubadora").value;
-//   const tempoDiario = document.getElementById("minutos").value;
-//   console.log(ovo);
-//   console.log(velocidade);
-//   console.log(incubadora);
-//   console.log(tempoDiario);
-// }
-// ); 
-
 const banana = (velocidade, ovo, incubadora, tempoDiario) => {
-  resultado.innerHTML = calculadora(velocidade, ovo, incubadora, tempoDiario);
+  resultado.innerHTML = `<p>Você irá caminhar por aproximadamente:  ${calculadora(velocidade, ovo, incubadora, tempoDiario)} dias`;
 };
 
 const peixinho = document.getElementById("calcular").addEventListener("click", () => {
@@ -32,10 +13,6 @@ const peixinho = document.getElementById("calcular").addEventListener("click", (
   const incubadora = document.querySelector('input[name="incubadora"]:checked').value;
   const tempoDiario = document.querySelector('input[name="tempo"]:checked').value;
   banana(velocidade, ovo, incubadora, tempoDiario);
-  console.log(ovo);
-  console.log(velocidade);
-  console.log(incubadora);
-  console.log(tempoDiario);
 });
 
 // filtro e ordenação
