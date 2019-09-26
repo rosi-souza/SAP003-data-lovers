@@ -1,20 +1,42 @@
 // calculadora
-const result = document.getElementsByClassName("resultado");
-
 // document.getElementById("calcular").;
-const velocidade = document.getElementById("egg-km").value;;
-const ovo = document.getElementById("velocidade").value;
-const incubadora = document.getElementById("incubadora").value;
-const tempoDiario = document.getElementById("minutos").value;
+// const velocidade = document.getElementById("egg-km").value;;
+// const ovo = document.getElementById("velocidade").value;
+// const incubadora = document.getElementById("incubadora").value;
+// const tempoDiario = document.getElementById("minutos").value;
 const resultado = document.getElementById("resultado");
 
 // result[0].innerHTML = `Aproximadamente ${calculadora(velocidade, ovo, incubadora, tempoDiario)} dias `;
 
+// b = document.getElementById("calculadora");
+// b.addEventListener("change", () => {
+//   const velocidade = document.getElementById("velocidade").value;; 
+//   const ovo = document.getElementById("egg-km").value;
+//   const incubadora = document.getElementById("incubadora").value;
+//   const tempoDiario = document.getElementById("minutos").value;
+//   console.log(ovo);
+//   console.log(velocidade);
+//   console.log(incubadora);
+//   console.log(tempoDiario);
+// }
+// ); 
 
-const banana = () => {
-  resultado.innerHTML = calculadora(velocidade, ovo, incubadora, tempoDiario/60);
+const banana = (velocidade, ovo, incubadora, tempoDiario) => {
+  resultado.innerHTML = calculadora(velocidade, ovo, incubadora, tempoDiario);
 };
-const peixinho = document.getElementById("calcular").addEventListener("click", banana);
+
+const peixinho = document.getElementById("calcular").addEventListener("click", () => {
+  event.preventDefault();
+  const velocidade = document.querySelector('input[name ="velocidade"]:checked').value;
+  const ovo = document.querySelector('input[name="ovo"]:checked').value;
+  const incubadora = document.querySelector('input[name="incubadora"]:checked').value;
+  const tempoDiario = document.querySelector('input[name="tempo"]').value;
+  banana(velocidade, ovo, incubadora, tempoDiario);
+  console.log(ovo);
+  console.log(velocidade);
+  console.log(incubadora);
+  console.log(tempoDiario);
+});
 
 // filtro e ordenação
 const printarpoke = document.getElementById("pokemon");

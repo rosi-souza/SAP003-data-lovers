@@ -6,6 +6,7 @@
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
     <link href="https://cdn.lineicons.com/1.0.1/LineIcons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
   </head>
   <body>
     <header>
@@ -31,39 +32,47 @@
         <p id="sobre">SOBRE SITE - introdução sobre a pagina</p>
       </section>
       <section class="calculadora">
-        <div class="incubadora">
-            <h3>Escolha a incubadora</h3>
-          <input id="incubadora" type="radio" name="image" id="normal" value="1">
-          <label for="normal">
-            <img class="incubadora" src="incubadoralimitada.png" alt="Incubadora Normal">
-          </label>
-          <input id="incubadora" type="radio" name="image" id="super" value="0,667">
-          <label for="super">
-            <img class="incubadora" src="superincubadora.png" alt="Incubadora super">
-          </label>
-        </div>
-        <div class="velocidade">
-          <h3>Escolha a sua velocidade</h3>
-            <input type="radio" name="velocidade" id="velocidade" value="4"><span>Devagar</span>
-            <input type="radio" name="velocidade" id="velocidade" value="5"><span>Normal</span>
-            <input type="radio" name="velocidade" id="velocidade" value="6"><span>Rápido</span>
-        </div>
-        <div class="ovo">
-          <h3>Escolha o ovo</h3>
-          <input id="egg-km" type="radio" name="km" value="2"><span class="km">2 KM</span>
-          <input id="egg-km" type="radio" name="km" value="5"> <span class="km">5 KM</span>
-          <input id="egg-km" type="radio" name="km" value="10"><span class="km">10 KM</span>
-        </div>
-        <div class="tempo">
-          <h3>Tempo de caminhada diária realizada pelo usuário</h3>
-          <input id="minutos" type="radio" name="" value="5"><span class="km">5 Minutos</span>
-          <input id="minutos" type="radio" name="" value="10"><span class="km">10 Minutos</span>
-          <input id="minutos" type="radio" name="" value="15"><span class="km">15 Minutos</span>
-          <input id="minutos" type="number" name="" value="" placeholder="Outro">
-        </div>
-        <button class="btn-resultado" id="calcular">Calcular</button>
-        <div id="resultado" class="resultado">
-        </div>
+        <p>Olá, treinador pokemon. Selecione as opções abaixo e verifique quanto tempo de caminhada será necessario para eclodir o ovo.</p>
+        <form id="calculadora">
+          <p>A minha encubadora é:</p>
+            <div class="incubadora" id="incubadora">
+              <input class="incubadora" type="radio" name="incubadora" value="1">
+              <label for="normal">
+                <img class="incubadora" src="incubadoralimitada.png" alt="Incubadora Normal">
+              </label>
+              <input class="incubadora" type="radio" name="incubadora" value="0,667">
+              <label for="super">
+                <img class="incubadora" src="superincubadora.png" alt="Incubadora super">
+             </label>
+            </div>
+            <div class="content-velocidade">
+              <p>Eu caminho: </p>
+                <input type="radio" name="velocidade" class="velocidade" value="4"><span>Devagar</span>
+                <input type="radio" name="velocidade" class="velocidade" value="5"><span>Normal</span>
+                <input type="radio" name="velocidade" class="velocidade" value="6"><span>Rápido</span>
+            </div>
+            <div id="egg-km">
+              <p>O ovo do pokemon é de: </p>
+              <input  class="egg-km" type="radio" name="ovo" value="2">
+                <span class="km">2 KM</span>
+              <input  class="egg-km" type="radio" name="ovo" value="5">
+                 <span class="km">5 KM</span>
+              <input  class="egg-km" type="radio" name="ovo" value="10">
+                <span class="km">10 KM</span>
+            </div>
+            <div id="tempo">
+              <p>Irei caminhar por: </p>
+              <input class="minutos" type="radio" name="tempo" value="5">
+                <span class="km">5 Minutos</span>
+              <input class="minutos" type="radio" name="tempo" value="10">
+                <span class="km">10 Minutos</span>
+              <input class="minutos" type="radio" name="tempo" value="15">
+                <span class="km">15 Minutos</span>
+              <input class="minutos" type="number" name="tempo" value="" placeholder="Outro">
+            </div>
+          <button class="btn-resultado" id="calcular">Calcular</button>
+        </form>
+        <div id="resultado" class="resultado">  
       </section>
       <section class="filtro">
         <h3 id="filtro">Escolha um ovo para visualizar os pokemons que podem eclodir</h3>

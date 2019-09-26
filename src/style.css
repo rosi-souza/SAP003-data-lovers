@@ -1,5 +1,5 @@
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 h1 {
@@ -108,6 +108,7 @@ cursor: pointer;
 #pokemon, #showpokemons {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 .card {
   margin: 10px;
@@ -137,6 +138,7 @@ cursor: pointer;
 .name {
   margin-top: 50px;
 }
+
 
 .egg-option {
   display: flex;
@@ -178,4 +180,6 @@ cursor: pointer;
 }
 .incubadora {
   cursor: pointer;
+  height: 100px;
+  /* margin-bottom: 40px; */
 }
