@@ -1,11 +1,20 @@
 // calculadora
 const result = document.getElementsByClassName("resultado");
-const velocidade = 5;
-const ovo = 10;
-const incubadora = 1;
-const tempoDiario = 15;
 
-result[0].innerHTML = `Aproximadamente ${calculadora(velocidade, ovo, incubadora, tempoDiario)} dias `;
+// document.getElementById("calcular").;
+const velocidade = document.getElementById("egg-km").value;;
+const ovo = document.getElementById("velocidade").value;
+const incubadora = document.getElementById("incubadora").value;
+const tempoDiario = document.getElementById("minutos").value;
+const resultado = document.getElementById("resultado");
+
+// result[0].innerHTML = `Aproximadamente ${calculadora(velocidade, ovo, incubadora, tempoDiario)} dias `;
+
+
+const banana = () => {
+  resultado.innerHTML = calculadora(velocidade, ovo, incubadora, tempoDiario/60);
+};
+const peixinho = document.getElementById("calcular").addEventListener("click", banana);
 
 // filtro e ordenação
 const printarpoke = document.getElementById("pokemon");
