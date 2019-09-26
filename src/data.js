@@ -27,5 +27,5 @@ const ordem = (array, data, order) => {
 window.data = {
   calculadora: calculadora,
   filtro: filtro,
-  ordem: ordem
+  ordem: ordem, 
 };

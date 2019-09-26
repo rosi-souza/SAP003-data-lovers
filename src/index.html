@@ -10,19 +10,25 @@
   <body>
     <header>
       <img class="icon-egg" src="icone-egg.svg" alt="Icone ovo">
-      <img class="title" src="https://fontmeme.com/permalink/190916/53bc315987f2845c82742bb3077372a2.png" alt="fonte-de-pokemon-go">
+      <h1>Egglator</h1>
+      <!-- <img class="title" src="https://fontmeme.com/permalink/190916/53bc315987f2845c82742bb3077372a2.png" alt="fonte-de-pokemon-go"> -->
+      <nav class="navbar">
+        <label class="menu-label" for="teste">
+          <input class="menu" type="checkbox"/>      
+            <i class="lni-menu"></i>
+        </label>
+          <ul>
+            <li><a>SOBRE</a></li>
+            <li><a href="#calculadora">CALCULADORA</a></li>
+            <li><a href="#filtro">POKEMON POR OVO</a></li>
+            <li><a href="#ordenar">ORDERNAR POKEMON</a></li>
+            <!-- <i class="lni-chevron-down"></i> -->
+          </ul>
+        </nav>
     </header>
-    <nav class="navbar">
-        <ul>
-          <li class="about-menu"><a>SOBRE</a></li>
-          <li><a>CALCULADORA</a></li>
-          <li ><a>POKEMON POR OVO</a></li>
-          <!-- <i class="lni-chevron-down"></i> -->
-        </ul>
-      </nav>
     <main>
       <section class="about">
-        <p>SOBRE SITE - introdução sobre a pagina</p>
+        <p id="sobre">SOBRE SITE - introdução sobre a pagina</p>
       </section>
       <section class="calculadora">
         calculadora
@@ -43,31 +49,40 @@
         </div>
       </section>
       <section class="filtro">
-        <h3>Escolha um ovo para visualizar os pokemons que podem eclodir</h3>
+        <h3 id="filtro">Escolha um ovo para visualizar os pokemons que podem eclodir</h3>
         <section class="radio" id ="radio">
           <div class="egg-option">
-            <input type="radio" name="imagem" id="i1" value="2 km">
-            <label for="i1"><img class="egg" src="Egg_2k.png" alt=""></label>
-            <input type="radio" name="imagem" id="i2" value="5 km">
-            <label for="i2"><img class="egg" src="Egg_5k.png" alt=""></label>
-            <input type="radio" name="imagem" id="i3" value="10 km">
-            <label for="i3"><img class="egg" src="egg10.png" alt=""></label>
+            <input type="radio" name="imagem" id="i1" value="2 km"/>
+            <label for="i1">
+              <span id="km-2" class="egg-km">2 km</span>
+              <img class="egg" src="Egg_2k.png" alt="">
+            </label>
+            <input type="radio" name="imagem" id="i2" value="5 km"/>
+            <label for="i2">
+              <span id="km-5" class="egg-km">5 km</span>
+              <img class="egg" src="Egg_5k.png" alt="">
+            </label>
+            <input type="radio" name="imagem" id="i3" value="10 km" />
+            <label for="i3">
+              <span id="km-10" class="egg-km">10 km</span>
+              <img class="egg" src="egg10.png" alt="">
+            </label>
           </div>
           <div id="pokemon"></div>
         </section>
       </section> 
       <hr>
-        <section class="select" id ="select-section">
-        <label for="select"> Ordenar por: </label>
-        <select class="select" id="select">
-          <option name="" id="" value="">Selecione uma opção</option>
-          <option name="id" value="id" target="crescente">Numero crescente</option>
-          <option name="id" value="id" target="decrescente">Numero decrescente</option>
-          <option name="nome" id="nome-AZ" value="name" target="crescente">Nome A-Z</option>
-          <option name="nome" id="nome-ZA" value="name" target="decrescente">Nome Z-A</option>
-        </select>
+        <section class="select" id ="select">
+          <div id="ordenar">
+            <label for="select"> <h3>Ordene os pokemons da região de Kanto:</h3> </label>
+            <select class="select" id="select-section">
+              <option name="" id="" value="">Selecione uma opção</option>
+              <option name="nome" id="nome" value="name">Nome</option>
+              <option name="id" id="id" value="id">Numero</option>
+            </select>
+          </div>
+        </section>
         <div id="showpokemons"></div>
-      </section>
     </main>
     <script src="data/pokemon/pokemon.js"></script>
     <script src="data.js"></script>

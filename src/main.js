@@ -18,7 +18,7 @@ radio.addEventListener("change", () => {
   printar(filtrado, printarpoke);
 });
 
-select = document.getElementById("select");
+select = document.getElementById("select-section");
 select.addEventListener("change", () => {
   let cresc = event.target.class;
   console.log(cresc);
@@ -35,7 +35,8 @@ const printar = (array, element) => {
     <div class="card">
       <div class="card-pokemon">
         <img src = "${element.img}">
-        <span class="name"> ${element.id}.${element.name} Tipo:${element.type}</span>
+        <span class="name"> ${element.id}.${element.name}</span>
+        <p class="type"> Tipo:${element.type}</p>
       </div>
     </div>`;});
   element.innerHTML = layout;
