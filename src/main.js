@@ -2,17 +2,17 @@
 
 const resultado = document.getElementById("resultado");
 
-const banana = (velocidade, ovo, incubadora, tempoDiario) => {
+const calculo = (velocidade, ovo, incubadora, tempoDiario) => {
   resultado.innerHTML = `<p>Você irá caminhar por aproximadamente:  ${calculadora(velocidade, ovo, incubadora, tempoDiario)} dias`;
 };
 
 const peixinho = document.getElementById("calcular").addEventListener("click", () => {
   event.preventDefault();
-  const velocidade = document.querySelector('input[name ="velocidade"]:checked').value;
-  const ovo = document.querySelector('input[name="ovo"]:checked').value;
-  const incubadora = document.querySelector('input[name="incubadora"]:checked').value;
-  const tempoDiario = document.querySelector('input[name="tempo"]:checked').value;
-  banana(velocidade, ovo, incubadora, tempoDiario);
+  const velocidade = document.querySelector("input[name =\"velocidade\"]:checked").value;
+  const ovo = document.querySelector("input[name=\"ovo\"]:checked").value;
+  const incubadora = document.querySelector("input[name=\"incubadora\"]:checked").value;
+  const tempoDiario = document.querySelector("input[name=\"tempo\"]:checked").value;
+  calculo(velocidade, ovo, incubadora, tempoDiario);
 });
 
 // filtro e ordenação
@@ -28,12 +28,9 @@ radio.addEventListener("change", () => {
 
 select = document.getElementById("select-section");
 select.addEventListener("change", () => {
-  let cresc = event.target.class;
-  console.log(cresc);
-  
+  let cresc = select[select.selectedIndex].getAttribute('sort');
   ordemtodos = ordem(listapokemon, event.target.value, cresc);
   printar(ordemtodos, showpokemons);
-
 });
 
 const printar = (array, element) => {

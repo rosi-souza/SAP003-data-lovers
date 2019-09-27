@@ -1,6 +1,5 @@
 const calculadora = (velocidade, ovo, incubadora, tempoDiario) => { //incubadora = 1 ou super = 0,667
   let dias = ~~((ovo * incubadora / velocidade) / (tempoDiario / 60));
-  console.log(dias);
   if (dias <= 1) {
     return 1;
   }
@@ -22,12 +21,6 @@ const ordem = (array, data, order) => {
     return 0;
   });
   return order === "decrescente" ? array.reverse() : array;
-
-  // if (key === "crescente") {
-  //   return array;
-  // } else {
-  //   return array.reverse()
-  // };
 };
 
 window.data = {
