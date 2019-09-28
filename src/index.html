@@ -29,10 +29,10 @@
     </header>
     <main>
       <section class="about">
-        <p id="sobre">SOBRE SITE - introdução sobre a pagina</p>
+        <p class="sobre">Olá, treinador pokémo.</p>
       </section>
       <section class="calculadora">
-        <p>Olá, treinador pokemon. Selecione as opções abaixo e verifique quanto tempo de caminhada será necessario para eclodir o ovo.</p>
+        <p>Treinador pokemon, selecione as opções abaixo e verifique quanto tempo de caminhada será necessario para eclodir o ovo.</p>
         <form id="calculadora">
           <p>A minha encubadora é:</p>
             <div class="incubadora" id="incubadora">
@@ -68,7 +68,7 @@
                 <span class="km">10 Minutos</span>
               <input class="minutos" type="radio" name="tempo" value="15">
                 <span class="km">15 Minutos</span>
-              <input class="minutos" type="number" name="tempo" value="" placeholder="Outro">
+              <input id="minutos" type="number" name="tempo" value="" placeholder="Outro">
             </div>
           <button class="btn-resultado" id="calcular">Calcular</button>
         </form>
@@ -101,9 +101,11 @@
         </section>
       </section> 
       <hr>
-        <section class="select" id ="select">
+        <section id ="select">
           <div id="ordenar">
-            <label for="select"> <h3>Ordene os pokemons da região de Kanto:</h3> </label>
+            <label for="select">
+               <p>Ordene os pokemons da região de Kanto:<p> 
+               </label>
             <select class="select" id="select-section">
               <option name="" id="" value="">Selecione uma opção</option>
               <option name="nome" id="nome" value="name">Nome</option>
