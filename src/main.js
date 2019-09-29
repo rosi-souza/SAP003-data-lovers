@@ -6,7 +6,7 @@ const resultado = document.getElementById("resultado");
     resultado.innerHTML = `<p>Você irá caminhar por aproximadamente:  ${calculadora(velocidade, ovo, incubadora, tempoDiario)} dias`;
   }
 
-const peixinho = document.getElementById("calcular").addEventListener("click", () => {
+document.getElementById("calcular").addEventListener("click", () => {
   event.preventDefault();
   const velocidade = document.querySelector("input[name =\"velocidade\"]:checked").value;
   const ovo = document.querySelector("input[name=\"ovo\"]:checked").value;
