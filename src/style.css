@@ -120,11 +120,16 @@ cursor: pointer;
   height: 40px;
   font-size: 18px;
   margin-bottom: 16px;
-  color: white;
-  border-radius: 30px;
-  background-color: #08224e;
+
   border: none;
+
+}
+.select-az {
+  background-color: #08224e;
+  border-radius: 30px;
   padding: 10px;
+  color: white;
+  font-size: 16px;
 }
 .name {
   margin-top: 50px;
