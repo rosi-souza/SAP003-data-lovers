@@ -2,14 +2,13 @@ body {
   font-family: 'Ubuntu', sans-serif;
 }
 
-h1 {
-  margin-left: 68px;
+.title {
+  /* margin-left: 68px; */
+  float: left;
 }
-header {
-  display: flex;
-  /* justify-content: center; */
+main {
+  display: inline-block;
 }
-
 .img {
   width: 100%;
   height: auto;
@@ -17,23 +16,19 @@ header {
 
 .icon-egg {
   width: 50px;
-  position: absolute;
+  float: left;
+  /* position: absolute; */
 }
-.navbar {
-  margin-left: auto;
- }
 
 ul {
   padding: 10px;
   list-style-type: none;
   overflow: hidden;
-  /* border: 2px solid #3A67BC; */
   display: flex;
   justify-content: center;
   padding-left: 0px;
   border-left: none;
   border-right: none;
-  /* box-shadow: 0px 4px 0px rgba(0,0,0,0.3); */
   float: right;
 }
 
@@ -62,38 +57,20 @@ input[type="checkbox"] {
   visibility: hidden;
 }
 
-@media only screen and (max-width: 767px) {
-  .lni-menu {
-    font-size: 20px;
-    font-weight: bolder;
-    display: block;
-    cursor: pointer;
-  }
-  ul {
-    display: none;
-  }
-  input .lni-menu :checked + ul li {
-    display: block;
-  }
-}
 
 .calculadora, .about {
-  border: solid 1px #ff6a62;
+  border: solid 1px white;
+  border-radius: 4px;
   padding: 16px;
   margin-bottom: 14px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  background-color: white;
+  margin-top: 40px;
 }
 
 .radio [type="radio"] {
   visibility: hidden;
 }
-/* label {
-  /* display: block;
-  border: 1px solid #666;
-  width: auto;
-  float: left;
-  margin: 20px;
-  border-radius: 2px; */
-
 
 .egg {
 height: 100px;
@@ -121,24 +98,29 @@ cursor: pointer;
   text-align: center;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   background-color: white;
- 
+  margin-top: 20px;
   }
 
-/* .image, .title {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-} */
 .select {
   display: block;
   height: 40px;
   font-size: 18px;
   margin-bottom: 16px;
+  border: none;
+}
+.select-az {
+  background-color: #08224e;
+  border-radius: 30px;
+  padding: 10px;
+  color: white;
+  font-size: 16px;
 }
 .name {
   margin-top: 50px;
 }
-
+.filtro {
+  margin-top: 40px;
+}
 
 .egg-option {
   display: flex;
@@ -181,5 +163,54 @@ cursor: pointer;
 .incubadora {
   cursor: pointer;
   height: 100px;
-  /* margin-bottom: 40px; */
+}
+
+.topnav {
+  overflow: hidden;
+  background: linear-gradient(to bottom, #243a7b 0%, #1d56a3 100%);
+  float: right;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background: linear-gradient(to bottom, #243a7b 0%, #cc3300 100%);
+}
+
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+  }
 }

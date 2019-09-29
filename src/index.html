@@ -1,34 +1,28 @@
 <!DOCTYPE html>
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <head>
   <meta charset="utf-8">
-  <title>Data Lovers</title>
+  <title>Egglator</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://cdn.lineicons.com/1.0.1/LineIcons.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
 </head>
-
 <body>
   <header>
-    <img class="icon-egg" src="icone-egg.svg" alt="Icone ovo">
-    <h1>Egglator</h1>
-    <!-- <img class="title" src="https://fontmeme.com/permalink/190916/53bc315987f2845c82742bb3077372a2.png" alt="fonte-de-pokemon-go"> -->
-    <nav class="navbar">
-      <label class="menu-label" for="teste">
-        <input class="menu" type="checkbox" />
-        <i class="lni-menu"></i>
-      </label>
-      <ul>
-        <li><a>SOBRE</a></li>
-        <li><a href="#calculadora">CALCULADORA</a></li>
-        <li><a href="#filtro">POKEMON POR OVO</a></li>
-        <li><a href="#ordenar">ORDERNAR POKEMON</a></li>
-        <!-- <i class="lni-chevron-down"></i> -->
-      </ul>
-    </nav>
+      <img class="icon-egg" src="icone-egg.svg" alt="Icone ovo">
+      <p class="title">Egglator</p>
+        <div class="topnav" id="myTopnav">
+            <a>SOBRE</a>
+            <a href="#calculadora">CALCULADORA</a>
+            <a href="#filtro">POKEMON POR OVO</a>
+            <a href="#ordenar">ORDERNAR POKEMON</a>
+            <a href="" class="icon"  id="openMenu">
+                <i class="lni-chevron-down"></i>
+              </a>
+        </div>
   </header>
+
   <main>
     <section class="about">
       <p id="sobre">SOBRE SITE - introdução sobre a pagina</p>
@@ -99,7 +93,6 @@
           </label>
         </div>
         <div id="pokemon">
-
         </div>
       </section>
     </section>
@@ -109,12 +102,12 @@
         <label for="select">
           <h3>Ordene os pokemons da região de Kanto:</h3>
         </label>
-        <select class="select" id="select-section">
+        <select class="select-az" id="select-section">
           <option name="" id="" value="">Selecione uma opção</option>
           <option sort="crescente" id="nome" value="name">Nome AZ</option>
           <option sort="decrescente" id="nomeaz" value="name">Nome ZA</option>
           <option sort="crescente" id="crescente" value="id">Numero Crescente</option>
-          <option sort="decrescente" id="decrescente" value="id">Numero Decrescente</option>
+          <option sort="decrescente" id="dec" value="id">Numero Decrescente</option>
         </select>
       </div>
     </section>
