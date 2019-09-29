@@ -28,7 +28,7 @@ radio.addEventListener("change", () => {
 
 select = document.getElementById("select-section");
 select.addEventListener("change", () => {
-  let cresc = select[select.selectedIndex].getAttribute('sort');
+  let cresc = select[select.selectedIndex].getAttribute("sort");
   ordemtodos = ordem(listapokemon, event.target.value, cresc);
   printar(ordemtodos, showpokemons);
 });

@@ -42,12 +42,12 @@ describe("Testando a calculadora", () => {
     expect(typeof data.calculadora).toBe("function");
   });
   it("cálculo para velocidade baixa, ovo de 2 km, incubadora normal e 15 minutos diários", () => {
-    expect(data.calculadora(4,2,1,15)).toEqual(6);
+    expect(data.calculadora(4, 2, 1, 15)).toEqual(2);
   });
   it("variando o tempo diário de caminhada", () => {
-    expect(data.calculadora(4,2,1,5)).toEqual(2);
+    expect(data.calculadora(4, 2, 1, 5)).toEqual(6);
   });
   it("calculo para valores menores que 1", () => {
-    expect(data.calculadora(4,5,1,10000)).toEqual(1);
+    expect(data.calculadora(4, 5, 1, 10000)).toEqual(1);
   });
 });
