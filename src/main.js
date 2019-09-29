@@ -2,20 +2,24 @@
 
 const resultado = document.getElementById("resultado");
 
-const calculo = (velocidade, ovo, incubadora, tempoDiario) => {
-  resultado.innerHTML = `<p>Você irá caminhar por aproximadamente:  ${calculadora(velocidade, ovo, incubadora, tempoDiario)} dias`;
-};
+  const calculo = (velocidade, ovo, incubadora, tempoDiario) => {
+    resultado.innerHTML = `<p>Você irá caminhar por aproximadamente:  ${calculadora(velocidade, ovo, incubadora, tempoDiario)} dias`;
+  }
 
 const peixinho = document.getElementById("calcular").addEventListener("click", () => {
   event.preventDefault();
   const velocidade = document.querySelector("input[name =\"velocidade\"]:checked").value;
   const ovo = document.querySelector("input[name=\"ovo\"]:checked").value;
   const incubadora = document.querySelector("input[name=\"incubadora\"]:checked").value;
-  const tempoDiario = document.querySelector("input[name=\"tempo\"]:checked").value;
-  calculo(velocidade, ovo, incubadora, tempoDiario);
+  const tempoDiario = document.getElementById('tempo-diario').value;
+    if (+tempoDiario <= 0) {
+    alert('Insira um tempo válido')
+  } else {
+    };
+    calculo(velocidade, ovo, incubadora, tempoDiario);
 });
 
-// filtro e ordenação
+// filtro de ovos
 const printarpoke = document.getElementById("pokemon");
 const showpokemons = document.getElementById("showpokemons");
 const listapokemon = POKEMON.pokemon;
@@ -26,12 +30,16 @@ radio.addEventListener("change", () => {
   printar(filtrado, printarpoke);
 });
 
+// ordenação 150 pokemons
+
 select = document.getElementById("select-section");
 select.addEventListener("change", () => {
   let cresc = select[select.selectedIndex].getAttribute("sort");
   ordemtodos = ordem(listapokemon, event.target.value, cresc);
   printar(ordemtodos, showpokemons);
 });
+
+// printar na tela
 
 const printar = (array, element) => {
   let layout = "";
@@ -49,8 +57,9 @@ const printar = (array, element) => {
   element.innerHTML = layout;
 };
 
+// menu
+
 openMenu = document.getElementById("openMenu").addEventListener("click", () => {
-  console.log("banana");
   event.preventDefault();
   var x = document.getElementById("myTopnav");
   if (x.className === "topnav") {

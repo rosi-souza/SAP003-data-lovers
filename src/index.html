@@ -33,7 +33,7 @@
       <form id="calculadora">
         <p>A minha encubadora é:</p>
         <div class="incubadora" id="incubadora">
-          <input class="incubadora" type="radio" name="incubadora" value="1">
+          <input class="incubadora" type="radio" name="incubadora" value="1" checked>
           <label for="normal">
             <img class="incubadora" src="incubadoralimitada.png" alt="Incubadora Normal">
           </label>
@@ -45,12 +45,12 @@
         <div class="content-velocidade">
           <p>Eu caminho: </p>
           <input type="radio" name="velocidade" class="velocidade" value="4"><span>Devagar</span>
-          <input type="radio" name="velocidade" class="velocidade" value="5"><span>Normal</span>
+          <input type="radio" name="velocidade" class="velocidade" value="5" checked><span>Normal</span>
           <input type="radio" name="velocidade" class="velocidade" value="6"><span>Rápido</span>
         </div>
         <div id="egg-km">
           <p>O ovo do pokemon é de: </p>
-          <input class="egg-km" type="radio" name="ovo" value="2">
+          <input class="egg-km" type="radio" name="ovo" value="2" checked>
           <span class="km">2 KM</span>
           <input class="egg-km" type="radio" name="ovo" value="5">
           <span class="km">5 KM</span>
@@ -59,13 +59,7 @@
         </div>
         <div id="tempo">
           <p>Irei caminhar por: </p>
-          <input class="minutos" type="radio" name="tempo" value="5">
-          <span class="km">5 Minutos</span>
-          <input class="minutos" type="radio" name="tempo" value="10">
-          <span class="km">10 Minutos</span>
-          <input class="minutos" type="radio" name="tempo" value="15">
-          <span class="km">15 Minutos</span>
-          <input class="minutos" type="number" name="tempo" value="" placeholder="Outro">
+          <input class="minutos" type="number" name="tempo" id="tempo-diario"> Minutos
         </div>
         <button class="btn-resultado" id="calcular">Calcular</button>
       </form>
