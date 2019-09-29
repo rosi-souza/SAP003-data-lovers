@@ -49,4 +49,15 @@ const printar = (array, element) => {
   element.innerHTML = layout;
 };
 
+openMenu = document.getElementById("openMenu").addEventListener("click", () => {
+  console.log("banana");
+  event.preventDefault();
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+});
+
 window.onload = printar(listapokemon, showpokemons);
