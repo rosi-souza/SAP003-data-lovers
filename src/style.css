@@ -3,7 +3,9 @@ body {
 }
 
 .title {
-  /* margin-left: 68px; */
+  font-size: 30px;
+    color: #273979;
+    margin-top: 8px;
   float: left;
 }
 main {
