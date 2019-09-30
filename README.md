@@ -39,7 +39,8 @@ Detalhes da calculadora:
 ![protótipo calculadora](https://trello-attachments.s3.amazonaws.com/5d77cf88d423548d714adb4f/5d77d156b76d8c467c141c6a/6b987e6f8f49c0e62aa952124ee0987e/WhatsApp_Image_2019-09-11_at_14.16.39.jpeg)
 
 Ao longo do desenvolvimento, percebeu-se que a seção sobre Pokemon Go não seria necessário, visto que o nossos usuários já conheceriam o jogo.
-Sentiu-se também a necessidade de implantar a seção de ordenação de TODOS os pokemons, visto que os pokemons por ovo não e 
+
+Optou-se em utilizar a ordenação em TODOS os pokemons ao invés de aplicar apenas nos pokemons filtrados por ovo, visto que não se viu necessidade de ordenação de resultados em quantidades reduzidas.
 
 ## 4. Teste de usabilidade
 
@@ -47,5 +48,4 @@ No teste de usabilidade foi detectado os seguintes problemas:
 - O menu horizontal não fica acessível para celular
 - Sem intrução de uso da calculadora o usuário não compreende o comportamento
 
-
-
+Resolveu-se os problemas alterando o menu em lista, deixando-o responsivo para telas menores e acrescentando um texto explicativo na calculadora.
