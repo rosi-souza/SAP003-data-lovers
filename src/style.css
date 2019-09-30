@@ -58,7 +58,7 @@ input[type="checkbox"] {
 }
 
 
-.calculadora, .about {
+.calculadora, .about, #filtro-section {
   border: solid 1px white;
   border-radius: 4px;
   padding: 16px;
@@ -148,9 +148,7 @@ cursor: pointer;
 #km-10 {
   color: #8A7CC8;
 }
-#showpokemons {
-  margin-top: 80px;
-}
+
 .btn-resultado {
   padding: 10px;
   background-color: #08224e;
@@ -204,9 +202,6 @@ cursor: pointer;
   body {
     text-align: center;
   }
-
-  #showpokemons {
-    margin-top: 120px;
 }
 
 @media screen and (max-width: 600px) {
