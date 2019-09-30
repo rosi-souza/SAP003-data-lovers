@@ -23,11 +23,14 @@ document.getElementById("calcular").addEventListener("click", () => {
 const printarpoke = document.getElementById("pokemon");
 const showpokemons = document.getElementById("showpokemons");
 const listapokemon = POKEMON.pokemon;
+const printarPorcentagem = document.getElementById("printar-porcentagem");
 
 radio = document.getElementById("radio");
 radio.addEventListener("change", () => {
   filtrado = filtro(listapokemon, event.target.value);
   printar(filtrado, printarpoke);
+  // let porcent = porcentagem(filtrado, listapokemon);
+  // printarPorcentagem.innerHTML = `SABIA? Com o ovo de ${event.target.value}, você poderá eclodir ${porcent.toFixed(2)}% dos 150 pokemons de Kanto!`
 });
 
 // ordenação 150 pokemons
@@ -39,7 +42,7 @@ select.addEventListener("change", () => {
   printar(ordemtodos, showpokemons);
 });
 
-// printar na tela
+// printar os cards
 
 const printar = (array, element) => {
   let layout = "";
@@ -49,8 +52,8 @@ const printar = (array, element) => {
     <div class="card">
       <div class="card-pokemon">
         <img src = "${element.img}">
-        <span class="name"> ${element.id}.${element.name}</span>
-        <p class="type"> Tipo:${element.type}</p>
+        <span class="name"> ${element.id}. ${element.name}</span>
+        <p class="type"> Tipo: ${element.type.join(" e ")}</p>
       </div>
     </div>`;
   });
