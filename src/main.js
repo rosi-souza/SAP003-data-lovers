@@ -2,21 +2,21 @@
 
 const resultado = document.getElementById("resultado");
 
-  const calculo = (velocidade, ovo, incubadora, tempoDiario) => {
-    resultado.innerHTML = `<p>Você irá caminhar por aproximadamente:  ${calculadora(velocidade, ovo, incubadora, tempoDiario)} dias`;
-  }
+const calculo = (velocidade, ovo, incubadora, tempoDiario) => {
+  resultado.innerHTML = `<p>Você irá caminhar por aproximadamente:  ${calculadora(velocidade, ovo, incubadora, tempoDiario)} dias`;
+};
 
 document.getElementById("calcular").addEventListener("click", () => {
   event.preventDefault();
   const velocidade = document.querySelector("input[name =\"velocidade\"]:checked").value;
   const ovo = document.querySelector("input[name=\"ovo\"]:checked").value;
   const incubadora = document.querySelector("input[name=\"incubadora\"]:checked").value;
-  const tempoDiario = document.getElementById('tempo-diario').value;
-    if (+tempoDiario <= 0) {
-    alert('Insira um tempo válido')
+  const tempoDiario = document.getElementById("tempo-diario").value;
+  if (+tempoDiario <= 0) {
+    alert("Insira um tempo válido");
   } else {
-    };
-    calculo(velocidade, ovo, incubadora, tempoDiario);
+  };
+  calculo(velocidade, ovo, incubadora, tempoDiario);
 });
 
 // filtro de ovos
@@ -29,8 +29,8 @@ radio = document.getElementById("radio");
 radio.addEventListener("change", () => {
   filtrado = filtro(listapokemon, event.target.value);
   printar(filtrado, printarpoke);
-  // let porcent = porcentagem(filtrado, listapokemon);
-  // printarPorcentagem.innerHTML = `SABIA? Com o ovo de ${event.target.value}, você poderá eclodir ${porcent.toFixed(2)}% dos 150 pokemons de Kanto!`
+  let porcent = porcentagem(filtrado, listapokemon);
+  printarPorcentagem.innerHTML = `SABIA? Com o ovo de ${event.target.value}, você poderá eclodir ${porcent.toFixed(2)}% dos 150 pokemons de Kanto!`;
 });
 
 // ordenação 150 pokemons
