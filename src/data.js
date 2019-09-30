@@ -23,6 +23,11 @@ const ordem = (array, data, order) => {
   return order === "decrescente" ? array.reverse() : array;
 };
 
+// const porcentagem = (arrayFiltrada, arrayDatabase) => {
+//   let percent = (arrayFiltrada.length/arrayDatabase.length)*100
+//   return percent
+// }
+
 window.data = {
   calculadora: calculadora,
   filtro: filtro,
