@@ -17,7 +17,7 @@
   
   Assim, o site apresenta uma seção de calculadora, onde é possivel estimar o tempo necessário (em dias) para eclodir um ovo pokemon, com base nessas caminhadas de rotina diária. O que parecia ser longas distancias e cansativas caminhadas são transformadas em dias comuns, sendo possivel adequar o jogo a sua rotina e eclodir ovos sem percerber.
   
-  Adicionalmente, disponibilizamos uma seção para identificar quais pokemons podem sair de cada ovo, e também um seção para consultar e ordenar os pokemons da região de Kanto por numero e nome (A-Z & Z_A).
+  Adicionalmente, disponibilizamos uma seção para identificar quais pokemons podem sair de cada ovo, e também um seção para consultar e ordenar os pokemons da região de Kanto por numero e nome (A-Z & Z-A).
 
 
 ## 2. Histórias do usuário
