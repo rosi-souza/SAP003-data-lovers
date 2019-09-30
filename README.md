@@ -20,6 +20,12 @@
 2 -  Como usuário desejo saber quanto tempo será necessário para chocar um ovo afim de adequar o jogo a minha rotina
 
 ## 3. Protótipo de baixa fidelidade
+Foram desenvolvidos alguns protótipos.
+Inicialmente, o site teria 4 sessões:
+
+![protótipo do site - geral] (https://trello-attachments.s3.amazonaws.com/5d77cf88d423548d714adb4f/5d77d156b76d8c467c141c6a/631baf8cb5a3bd3a69dbf53e8803d79d/WhatsApp_Image_2019-09-11_at_14.00.09.jpeg)
+
+![protótipo calculadora] (https://trello-attachments.s3.amazonaws.com/5d77cf88d423548d714adb4f/5d77d156b76d8c467c141c6a/6b987e6f8f49c0e62aa952124ee0987e/WhatsApp_Image_2019-09-11_at_14.16.39.jpeg)
 
 
 ## 4. Teste de usabilidade
