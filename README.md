@@ -10,7 +10,7 @@
 ***
 
 ## 1. Egglator
-  Egglator é uma página para auxiliar os jogadores de Pokemon Go encontrar um equilíbro entre  a sua rotina e o jogo. No site é possivel encontrar uma calculadora que permite calcular o tempo que será necessário para eclodir um ovo pokemon, uma seção para identificar qual pokemon sairá de cada ovo, e a opção de ordenar os pokemons da região de Kanto por numero e nome (A-Z & Z_A).
+  Egglator é uma página para auxiliar os jogadores de Pokemon Go encontrar um equilíbro entre  a sua rotina e o jogo. No site é possivel encontrar uma calculadora que permite calcular o tempo que será necessário para eclodir um ovo pokemon, uma seção para identificar qual pokemon sairá de cada ovo, e a opção de ordenar os pokemons da região de Kanto por numero e nome (A-Z & Z-A).
 
 
 ## 2. Histórias do usuário
