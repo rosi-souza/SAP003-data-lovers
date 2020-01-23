@@ -1,14 +1,22 @@
-body {
-  font-family: 'Ubuntu', sans-serif;
+html { 
+  background: url('bgpokemon.png') no-repeat center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
-
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+}
 .title {
   font-size: 30px;
-    color: #273979;
-    margin-top: 8px;
+  color: #273979;
+  margin-top: 8px;
   float: left;
 }
 main {
+  text-align: center;
   display: inline-block;
 }
 .img {
@@ -19,7 +27,6 @@ main {
 .icon-egg {
   width: 50px;
   float: left;
-  /* position: absolute; */
 }
 
 ul {
@@ -59,14 +66,15 @@ input[type="checkbox"] {
   visibility: hidden;
 }
 
+.incubadora[type="radio"]{
+  visibility: hidden;
+}
+
 
 .calculadora, .about, #filtro-section {
-  border: solid 1px white;
   border-radius: 4px;
   padding: 16px;
   margin-bottom: 14px;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-  background-color: white;
   margin-top: 40px;
 }
 
@@ -101,6 +109,7 @@ cursor: pointer;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   background-color: white;
   margin-top: 20px;
+  border-radius: 6px;
   }
 
 .select {
@@ -109,6 +118,7 @@ cursor: pointer;
   font-size: 18px;
   margin-bottom: 16px;
   border: none;
+  outline: 0;
 }
 .select-az {
   background-color: #08224e;
@@ -116,6 +126,7 @@ cursor: pointer;
   padding: 10px;
   color: white;
   font-size: 16px;
+  outline: 0; 
 }
 .name {
   margin-top: 20px;
@@ -135,8 +146,6 @@ cursor: pointer;
 }
 
 .egg-km {
-  /* justify-content: center;
-  display: flex; */
   font-size: 26px;
   font-weight: 700;
 }
@@ -152,7 +161,7 @@ cursor: pointer;
 }
 
 .btn-resultado {
-  padding: 10px;
+  padding: 12px;
   background-color: #08224e;
   color: white;
   font-size: 16px;
@@ -160,6 +169,7 @@ cursor: pointer;
   border-color: #08224e;
   cursor: pointer;
   margin-top: 10px;
+  outline: 0;
 }
 .incubadora {
   cursor: pointer;
@@ -217,4 +227,24 @@ cursor: pointer;
     float: none;
     display: block;
   }
+}
+
+.input-time {
+  border: solid 1px #e6e6e6;
+  border-radius: 4px;
+  padding: 12px;
+  outline: 0;
+}
+
+.material-icons{
+  text-decoration: none;
+  font-size: 30px !important;
+  border: solid 1px;
+  border-radius: 50%;
+  color: red;
+  font-weight: bolder !important;;
+}
+.top-arrow{
+  position: fixed;
+  top: 80%;
 }

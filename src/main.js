@@ -1,48 +1,38 @@
-// calculadora
+const calculationResult = document.getElementById("resultado");
 
-const resultado = document.getElementById("resultado");
-
-const calculo = (velocidade, ovo, incubadora, tempoDiario) => {
-  resultado.innerHTML = `<p>Você irá caminhar por aproximadamente:  ${calculadora(velocidade, ovo, incubadora, tempoDiario)} dias`;
+const calculo = (speed, eggType, incubator, walkInMinutes) => {
+  calculationResult.innerHTML = `<p>Você irá caminhar por aproximadamente:  ${calculadora(speed, eggType, incubator, walkInMinutes)} dias`;
 };
 
-document.getElementById("calcular").addEventListener("click", () => {
+document.getElementById("calcular").addEventListener("click", (event) => {
   event.preventDefault();
-  const velocidade = document.querySelector("input[name =\"velocidade\"]:checked").value;
-  const ovo = document.querySelector("input[name=\"ovo\"]:checked").value;
-  const incubadora = document.querySelector("input[name=\"incubadora\"]:checked").value;
-  const tempoDiario = document.getElementById("tempo-diario").value;
-  if (+tempoDiario <= 0) {
+  const speed = document.querySelector("input[name =\"speed\"]:checked").value;
+  const eggType = document.querySelector("input[name=\"ovo\"]:checked").value;
+  const incubator = document.querySelector("input[name=\"incubadora\"]:checked").value;
+  const walkInMinutes = document.getElementById("diario-time").value;
+  if (walkInMinutes <= 0) {
     alert("Insira um tempo válido");
   } else {
+    calculo(speed, eggType, incubator, walkInMinutes);
   };
-  calculo(velocidade, ovo, incubadora, tempoDiario);
 });
 
-// filtro de ovos
-const printarpoke = document.getElementById("pokemon");
-const showpokemons = document.getElementById("showpokemons");
-const listapokemon = POKEMON.pokemon;
-const printarPorcentagem = document.getElementById("printar-porcentagem");
+const printarPokemons = document.getElementById("pokemon");
+const showPokemons = document.getElementById("showpokemons");
+const listPokemon = POKEMON.pokemon;
 
-radio = document.getElementById("radio");
-radio.addEventListener("change", () => {
-  filtrado = filtro(listapokemon, event.target.value);
-  printar(filtrado, printarpoke);
-  let porcent = porcentagem(filtrado, listapokemon);
-  printarPorcentagem.innerHTML = `SABIA? Com o ovo de ${event.target.value}, você poderá eclodir ${porcent.toFixed(2)}% dos 150 pokemons de Kanto!`;
+eggPicker = document.getElementById("radio");
+eggPicker.addEventListener("change", () => {
+  filteredPokemons = filterPokemon(listPokemon, event.target.value);
+  printar(filteredPokemons, printarPokemons);
 });
-
-// ordenação 150 pokemons
 
 select = document.getElementById("select-section");
 select.addEventListener("change", () => {
   let cresc = select[select.selectedIndex].getAttribute("sort");
-  ordemtodos = ordem(listapokemon, event.target.value, cresc);
-  printar(ordemtodos, showpokemons);
+  orderedPokemons = orderPokemon(listPokemon, event.target.value, cresc);
+  printar(orderedPokemons, showPokemons);
 });
-
-// printar os cards
 
 const printar = (array, element) => {
   let layout = "";
@@ -60,16 +50,14 @@ const printar = (array, element) => {
   element.innerHTML = layout;
 };
 
-// menu
-
 openMenu = document.getElementById("openMenu").addEventListener("click", () => {
   event.preventDefault();
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
+  var menu = document.getElementById("myTopnav");
+  if (menu.className === "topnav") {
+    menu.className += " responsive";
   } else {
-    x.className = "topnav";
+    menu.className = "topnav";
   }
 });
 
-window.onload = printar(listapokemon, showpokemons);
+window.onload = printar(listPokemon, showPokemons);

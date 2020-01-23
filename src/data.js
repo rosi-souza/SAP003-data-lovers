@@ -1,5 +1,5 @@
-const calculadora = (velocidade, ovo, incubadora, tempoDiario) => { //incubadora = 1 ou super = 0,667
-  let dias = ~~((ovo * incubadora / velocidade) / (tempoDiario / 60));
+const calculadora = (speed, eggType, incubator, walkInMinutes) => { //incubator = 1 ou super = 0,667
+  let dias = ~~((eggType * incubator / speed) / (walkInMinutes / 60));
   if (dias <= 1) {
     return 1;
   }
@@ -8,11 +8,11 @@ const calculadora = (velocidade, ovo, incubadora, tempoDiario) => { //incubadora
   }
 };
 
-const filtro = (array, ovo) => {
-  return array.filter(x => x.egg == ovo);
+const filterPokemon = (array, egg) => {
+  return array.filter(element => element.egg == egg);
 };
 
-const ordem = (array, data, order) => {
+const orderPokemon = (array, data, order) => {
   array.sort((a, b) => {
     if (a[data] < b[data])
       return -1;
@@ -23,13 +23,8 @@ const ordem = (array, data, order) => {
   return order === "decrescente" ? array.reverse() : array;
 };
 
-// const porcentagem = (arrayFiltrada, arrayDatabase) => {
-//   let percent = (arrayFiltrada.length/arrayDatabase.length)*100
-//   return percent
-// }
-
 window.data = {
   calculadora: calculadora,
-  filtro: filtro,
-  ordem: ordem,
+  filterPokemon: filterPokemon,
+  orderPokemon: orderPokemon,
 };
