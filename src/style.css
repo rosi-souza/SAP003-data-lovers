@@ -66,11 +66,6 @@ input[type="checkbox"] {
   visibility: hidden;
 }
 
-.incubadora[type="radio"]{
-  visibility: hidden;
-}
-
-
 .calculadora, .about, #filtro-section {
   border-radius: 4px;
   padding: 16px;
@@ -146,7 +141,6 @@ cursor: pointer;
 }
 
 .egg-km {
-  font-size: 26px;
   font-weight: 700;
 }
 #km-2 {
@@ -171,9 +165,45 @@ cursor: pointer;
   margin-top: 10px;
   outline: 0;
 }
-.incubadora {
+.incubator {
   cursor: pointer;
   height: 100px;
+}
+
+input[type="radio"] {
+  appearance:none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  margin:0 40px;
+  width: 24px;
+  height: 24px;
+  background: #eeeeee;
+  box-shadow: inset 0 0 0 .4em white,
+    0 0 0 .1em;
+  border-radius: 50%;
+  transition: .2s;
+  cursor:pointer;
+  color: #09224E;
+}
+
+input[type="radio"]:hover{
+  background: #09224E;
+  box-shadow: inset 0 0 0 .6em white,
+    0 0 0 .3em;
+}
+input[type="radio"]:checked{
+  background: #09224E;
+  box-shadow: inset 0 0 0 .6em white,
+    0 0 0 .3em;
+}
+
+input[type="radio"]:checked{
+  background: #09224E;
+  box-shadow: inset 0 0 0 .4em white,
+    0 0 0 .3em #09224E;
+}
+input[type="radio"]:focus{
+  outline: 0;
 }
 
 .topnav {
@@ -227,6 +257,15 @@ cursor: pointer;
     float: none;
     display: block;
   }
+  .incubator {
+    display: flex;
+  }
+  input[type="radio"]{
+    height: 18px;
+    width: 18px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
 }
 
 .input-time {
@@ -234,6 +273,7 @@ cursor: pointer;
   border-radius: 4px;
   padding: 12px;
   outline: 0;
+  font-size: 16px;
 }
 
 .material-icons{
@@ -244,7 +284,14 @@ cursor: pointer;
   color: red;
   font-weight: bolder !important;;
 }
+
 .top-arrow{
   position: fixed;
   top: 80%;
+}
+
+.error{
+  color: red;
+  font-size: 20px;
+  font-weight: bolder;
 }

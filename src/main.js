@@ -1,4 +1,5 @@
 const calculationResult = document.getElementById("resultado");
+const error = document.getElementById("error");
 
 const calculo = (speed, eggType, incubator, walkInMinutes) => {
   calculationResult.innerHTML = `<p>Você irá caminhar por aproximadamente:  ${calculadora(speed, eggType, incubator, walkInMinutes)} dias`;
@@ -8,12 +9,14 @@ document.getElementById("calcular").addEventListener("click", (event) => {
   event.preventDefault();
   const speed = document.querySelector("input[name =\"speed\"]:checked").value;
   const eggType = document.querySelector("input[name=\"ovo\"]:checked").value;
-  const incubator = document.querySelector("input[name=\"incubadora\"]:checked").value;
+  const incubator = document.querySelector("input[name=\"incubator\"]:checked").value;
   const walkInMinutes = document.getElementById("diario-time").value;
   if (walkInMinutes <= 0) {
-    alert("Insira um tempo válido");
+    error.innerHTML = "Insira um numero válido. Ex: 2";
+    calculationResult.innerHTML= "";
   } else {
     calculo(speed, eggType, incubator, walkInMinutes);
+    error.innerHTML= "";
   };
 });
 

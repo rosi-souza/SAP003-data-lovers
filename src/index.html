@@ -34,38 +34,54 @@
         eclodir seu ovo!</p>
       <form>
         <p>A minha encubadora é:</p>
-        <div class="incubadora" id="incubadora">
-          <input class="incubadora" id="normal" type="radio" name="incubadora" value="1" checked>
+        <div class="incubator" id="incubator">
+          <input class="incubator" id="normal" type="radio" name="incubator" value="1" checked>
           <label for="normal">
-            <img class="incubadora"  src="incubadoralimitada.png" alt="Incubadora Normal">
+            <img class="incubator"  src="incubadoralimitada.png" alt="Incubadora Normal">
           </label>
-          <input class="incubadora" id="super" type="radio" name="incubadora" value="0,667">
+          <input class="incubator" id="super" type="radio" name="incubator" value="0,667">
           <label for="super">
-            <img class="incubadora"  src="superincubadora.png" alt="Incubadora super">
+            <img class="incubator"  src="superincubadora.png" alt="Incubadora super">
           </label>
         </div>
         <div>
           <p>Eu caminho: </p>
-          <input type="radio" name="speed" class="speed" value="4"><span>Devagar</span>
-          <input type="radio" name="speed" class="speed" value="5" checked><span>Normal</span>
-          <input type="radio" name="speed" class="speed" value="6"><span>Rápido</span>
+          <input  id="slow" type="radio" name="speed" class="speed" value="4">
+          <label for="slow">
+            <span>Devagar</span>
+          </label>
+          <input id="simple" type="radio" name="speed" class="speed" value="5" checked>
+          <label for="simple">
+            <span>Normal</span>
+          </label>
+          <input id="fast" type="radio" name="speed" class="speed" value="6">
+          <label for="fast">
+            <span>Rápido</span>
+          </label>
         </div>
         <div id="egg-km">
           <p>O ovo do pokemon é de: </p>
-          <input class="egg-km" type="radio" name="ovo" value="2" checked>
-          <span class="km">2 KM</span>
-          <input class="egg-km" type="radio" name="ovo" value="5">
-          <span class="km">5 KM</span>
-          <input class="egg-km" type="radio" name="ovo" value="10">
-          <span class="km">10 KM</span>
+          <input  id="2km" class="egg-km" type="radio" name="ovo" value="2" checked>
+          <label for="2km">
+            <span class="km">2 KM</span>
+          </label>
+          <input id="5km" class="egg-km" type="radio" name="ovo" value="5">
+          <label for="5km">
+            <span class="km">5 KM</span>
+          </label>
+          <input id="10km" class="egg-km" type="radio" name="ovo" value="10">
+          <label for="10km">
+            <span class="km">10 KM</span>
+          </label>
         </div>
         <div id="tempo">
           <p>Irei caminhar por: </p>
           <input class="input-time" type="number" name="tempo" id="diario-time"> Minutos
         </div>
         <button class="btn-resultado" id="calcular">Calcular</button>
+        <p id="error" class="error"></p>
       </form>
-      <div id="resultado" class="resultado">
+    <div id="resultado" class="resultado">
     </section>
     <section class="filtro" id="filtro-section">
       <h2>POKEMON POR OVO</h2>
