@@ -6,7 +6,8 @@ html {
   background-size: cover;
 }
 body {
-  font-family: 'Roboto', sans-serif;
+  /* font-family: 'Roboto', sans-serif; */
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 20px;
 }
 .title {
@@ -184,6 +185,8 @@ input[type="radio"] {
   transition: .2s;
   cursor:pointer;
   color: #09224E;
+  margin: 10px;
+  vertical-align: middle;
 }
 
 input[type="radio"]:hover{
@@ -243,6 +246,7 @@ input[type="radio"]:focus{
   }
   body {
     text-align: center;
+    font-size: 16px;
   }
 }
 
@@ -282,7 +286,7 @@ input[type="radio"]:focus{
   font-weight: bolder !important;
   border: solid 1px;
   border-radius: 50%;
-  color: #09224E;
+  color: white;
   font-weight: bolder !important;;
 }
 
