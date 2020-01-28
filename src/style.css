@@ -279,15 +279,17 @@ input[type="radio"]:focus{
 .material-icons{
   text-decoration: none;
   font-size: 30px !important;
+  font-weight: bolder !important;
   border: solid 1px;
   border-radius: 50%;
-  color: red;
+  color: #09224E;
   font-weight: bolder !important;;
 }
 
 .top-arrow{
   position: fixed;
   top: 80%;
+  right: 0px;
 }
 
 .error{
