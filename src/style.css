@@ -286,14 +286,14 @@ input[type="radio"]:focus{
   font-weight: bolder !important;
   border: solid 1px;
   border-radius: 50%;
-  color: white;
+  color: red;
   font-weight: bolder !important;;
 }
 
 .top-arrow{
   position: fixed;
   top: 80%;
-  right: 0px;
+  right: 10px;
 }
 
 .error{
