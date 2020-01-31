@@ -5,7 +5,8 @@
 * [1. Definição do produto](#1-egglator)
 * [2. Histórias do usuário](#2-histórias-do-usuário)
 * [3. Protótipo de baixa fidelidade](#3-protótipo-de-baixa-fidelidade)
-* [4. Teste de usabilidade](#4-teste-de-usabilidade)
+* [4. Imagens](#4-imagens)
+* [5. Teste de usabilidade](#5-teste-de-usabilidade)
 
 ***
 
@@ -42,7 +43,15 @@ Ao longo do desenvolvimento, percebeu-se que a seção sobre Pokemon Go não ser
 
 Optou-se em utilizar a ordenação em TODOS os pokemons ao invés de aplicar apenas nos pokemons filtrados por ovo, visto que não se viu necessidade de ordenação de resultados em quantidades reduzidas.
 
-## 4. Teste de usabilidade
+## 4. Imagens
+
+Detalhes da calculadora:
+![calculadora](./src/calculadora.png)
+
+Filtro de pokemons:
+![filtro de pokemons](./src/filtro.png)
+
+## 5. Teste de usabilidade
 
 No teste de usabilidade foi detectado os seguintes problemas:
 - O menu horizontal não fica acessível para celular
